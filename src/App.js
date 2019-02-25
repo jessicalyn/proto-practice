@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { protoPractice } from './protoPractice'
+import { protoPractice } from './protoPractice';
+import Question from './Question'
 
 class App extends Component {
   constructor() {
@@ -12,9 +13,6 @@ class App extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   this.setState({allQuestions: protoPractice})
-  // }
   startPractice() {
 
   }
@@ -28,7 +26,7 @@ class App extends Component {
         <h3>Answers missed with be added to your study guide for futher practice.</h3>
         <button onClick={this.startPractice}>Start Practicing</button>
         <button>Reset Study Guide</button>
-        <Question allQuestions/>
+        <Question allQuestions={this.state.allQuestions}/>
       </div>
     );
   }

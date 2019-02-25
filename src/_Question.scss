@@ -1,0 +1,26 @@
+.question-container {
+  background-color: $baby-powder;
+  margin: 5rem;
+  border: .3rem solid;
+  border-radius: 2rem;
+}
+
+.answer-buttons {
+  border: .2rem solid;
+  border-radius: 2rem;
+  background: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: $denim;
+  margin: 2rem;
+  padding: 1rem 2rem;
+  &:hover {
+    background: $sea-green;
+    color: $baby-powder
+  }
+}
+
+img {
+  max-width: 700px;
+  margin-top: 1rem
+}
