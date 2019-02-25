@@ -14,6 +14,7 @@
   color: $denim;
   margin: 2rem;
   padding: 1rem 2rem;
+  outline: none;
   &:hover {
     background: $sea-green;
     color: $baby-powder
@@ -22,5 +23,7 @@
 
 img {
   max-width: 700px;
-  margin-top: 1rem
+  margin-top: 1rem;
+  border: .2rem solid lightgrey;
+  border-radius: .6rem;
 }
