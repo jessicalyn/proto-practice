@@ -24,7 +24,6 @@ export default class Question extends Component {
   }
 
   render = () => {
-    console.log("this question", this.props.currentQuestion)
     const {contentDisplayed} = this.state
     const {currentQuestion} = this.props
     return (

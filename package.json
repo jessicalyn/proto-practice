@@ -2,7 +2,6 @@
   "name": "proto-practice",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jessicalyn.github.io/proto-practice/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
@@ -12,8 +11,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -26,5 +23,15 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "enzyme-to-json": "^3.3.5"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  }
 }

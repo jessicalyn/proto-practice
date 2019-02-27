@@ -12,13 +12,11 @@ class App extends Component {
       activeQuestions: [],
       studyGuideQuestions: JSON.parse(localStorage.getItem("studyGuideQuestions")) || [],
       practiceRound: "start",
-      //practiceRound options: "start" "flashcards" "end"
       currentIndex: JSON.parse(localStorage.getItem("currentIndex")) || 0
     }
   }
 
   componentDidMount() {
-    console.log("componentDidMount")
     fetch('http://memoize-datasets.herokuapp.com/api/v1/JHprotoPractice')
     .then(response => response.json())
     .then(result => {
@@ -41,7 +39,6 @@ class App extends Component {
   }
 
   startPractice = () => {
-    console.log("startPractice")
     if(this.state.activeQuestions.length === 0) {
       this.setState({activeQuestions: this.state.allQuestions})
     }
@@ -56,6 +53,7 @@ class App extends Component {
     } else {
       this.setState({currentIndex: currentIndex + 1}, 
       this.saveToStorage("currentIndex", currentIndex + 1))
+      this.saveToStorage("activeQuestions", activeQuestions)
     }
   }
 
@@ -66,7 +64,6 @@ class App extends Component {
   }
 
   useStudyGuide = () => {
-    console.log("study guide", this.state.studyGuideQuestions)
     this.saveToStorage("activeQuestions", this.state.studyGuideQuestions)
     this.setState({
       activeQuestions: this.state.studyGuideQuestions, 
@@ -91,9 +88,7 @@ class App extends Component {
   }
 
   render() {
-    console.log("app render")
     const {activeQuestions, practiceRound, currentIndex, studyGuideQuestions} = this.state
-    // let currentScore = 30 - studyGuideQuestions.length
     return (
       <div className="App">
         <h1>ProtoPractice</h1>
@@ -102,7 +97,6 @@ class App extends Component {
           practiceRound === "start" &&
             <Start
               startPractice={this.startPractice}
-              studyGuideQuestions={studyGuideQuestions}
             />
         }
         {
@@ -116,7 +110,6 @@ class App extends Component {
         {
           practiceRound === "end" &&
             <End
-            // currentScore={currentScore}
             studyGuideQuestions={studyGuideQuestions}
             clearStorage={this.clearStorage}
             useStudyGuide={this.useStudyGuide}

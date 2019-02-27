@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match a snapshot with all data passed in 1`] = `
+<div
+  className="App"
+>
+  <h1>
+    ProtoPractice
+  </h1>
+  <h2>
+    Build your knowledge of array, object, and string prototypes!
+  </h2>
+  <Start
+    startPractice={[Function]}
+  />
+</div>
+`;

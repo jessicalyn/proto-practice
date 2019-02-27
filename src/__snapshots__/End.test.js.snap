@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`End should match a snapshot with all data passed in 1`] = `
+<div
+  className="question-container"
+>
+  <div>
+    <h2>
+      Keep Going!
+    </h2>
+    <h3>
+      You have 
+      2
+       questions in your Study Guide.
+    </h3>
+    <button
+      className="study-guide large-button"
+      onClick={[MockFunction]}
+    >
+      Practice Study Guide
+    </button>
+    <button
+      className="start-over large-button"
+      onClick={[MockFunction]}
+    >
+      Start Over
+    </button>
+  </div>
+</div>
+`;
