@@ -13,7 +13,7 @@ Sass
 
 ## See it in action
 
-![ProtoPractice Start](proto-practice/public/start-game.gif)
+![ProtoPractice Start](https://github.com/jessicalyn/proto-practice/blob/master/public/start-game.gif)
 
 
 
