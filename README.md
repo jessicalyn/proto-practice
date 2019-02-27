@@ -13,7 +13,7 @@ Sass
 
 ## See it in action
 
-![ProtoPractice Start](http://url/to/img.png)
+![ProtoPractice Start](proto-practice/public/start-game.gif)
 
 
 
