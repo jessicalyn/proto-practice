@@ -1,3 +1,9 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -22,23 +28,34 @@ code {
 h1 {
   font-family: 'Laila', serif;
   font-size: 8rem;
+  margin: 1rem 1rem 0 1rem;
 }
 
 h2 {
   font-family: 'Laila', serif;
+  margin-top: 0
 }
 
-button {
+.large-button {
   border: .3rem solid;
   border-radius: 2rem;
-  background: none;
+  background-color: $baby-powder;
   cursor: pointer;
   font-size: 2rem;
   color: $denim;
-  margin: 3rem;
-  padding: 1rem 2rem;
+  width: 20rem;
+  height: 4rem;
+  margin: 2rem;
+  // margin-top: 2rem;
+  outline: none;
   &:hover {
     background: $sea-green;
     color: $baby-powder
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    width: 320px
   }
 }

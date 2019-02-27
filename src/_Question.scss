@@ -1,29 +1,40 @@
 .question-container {
   background-color: $baby-powder;
-  margin: 5rem;
+  margin: 0 auto;
   border: .3rem solid;
   border-radius: 2rem;
+  width: 80%;
+  height: 40rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+img {
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+  border: .2rem solid lightgrey;
+  border-radius: .6rem;
+}
+
+.answer-buttons-container {
+  vertical-align: bottom;
 }
 
 .answer-buttons {
   border: .2rem solid;
   border-radius: 2rem;
-  background: none;
+  background-color: $baby-powder;
   cursor: pointer;
   font-size: 1.5rem;
   color: $denim;
-  margin: 2rem;
-  padding: 1rem 2rem;
+  width: 12rem;
+  height: 4rem;
+  margin: 3rem;
   outline: none;
   &:hover {
     background: $sea-green;
     color: $baby-powder
   }
-}
-
-img {
-  max-width: 700px;
-  margin-top: 1rem;
-  border: .2rem solid lightgrey;
-  border-radius: .6rem;
 }
